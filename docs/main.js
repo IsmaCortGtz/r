@@ -177,6 +177,17 @@ function updateOutput () {
   }
 }
 
+const redirectContainerElement = document.querySelector("#redirect-container");
+const redirectLinkElement = document.querySelector("#redirect-link");
+const loaderElement = document.querySelector("#loader");
+
+function handleRedirectPrompt (target) {
+  loaderElement.style.display = "none";
+  redirectContainerElement.style.display = "flex";
+  redirectLinkElement.textContent = target;
+  redirectLinkElement.href = target;
+}
+
 inputLinkElement.addEventListener("input", () => {
   qrCorrectionManuallySet = false;
   updateOutput();
@@ -205,7 +216,7 @@ inputLinkElement.addEventListener("input", () => {
   if (payload && payload.trim()) {
     try {
       const target = decompress(payload, alphabet);
-      window.location.href = target;
+      handleRedirectPrompt(target);
       return;
     } catch (e) {
       console.warn(`Redirect failed. Could not decode input.`);
@@ -215,8 +226,10 @@ inputLinkElement.addEventListener("input", () => {
 
   updateOutput();
 
-  document.querySelector("#loader").style.opacity = 0;
+  loaderElement.style.opacity = 0;
   document.querySelector("#content").style.opacity = 1;
   document.querySelector("#content").style.pointerEvents = "auto";
+  document.querySelector("header").style.opacity = 1;
+  document.querySelector("header").style.pointerEvents = "auto";
 
 })();
