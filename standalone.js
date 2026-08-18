@@ -1,9 +1,9 @@
-import { compress, decompress } from "./compress.js";
+import { compress, decompress } from "./docs/compress.js";
 import {
   outputAlphabetASCII,
   outputAlphabetQR,
   outputAlphabetEmoji
-} from "./alphabets.js";
+} from "./docs/alphabets.js";
 
 const input = process.argv[2]?.trim();
 const alphabetName = process.argv[3]?.trim() || "ascii";
