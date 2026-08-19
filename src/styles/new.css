@@ -1,0 +1,98 @@
+.qr-preview {
+  min-width: 180px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-preview svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.color-input {
+  width: 2.5rem;
+  height: 2rem;
+  padding: 2px;
+  cursor: pointer;
+  border-radius: var(--radius-field);
+  border: 1px solid oklch(var(--bc) / 0.15);
+}
+
+/* Tab toggle buttons */
+.tab-btn {
+  cursor: pointer;
+  border: none;
+}
+.tab-btn:hover {
+  text-decoration: none;
+}
+
+/* Type selector row */
+.type-scroll::-webkit-scrollbar {
+  height: 0;
+}
+
+.type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  background: oklch(var(--b2));
+  color: oklch(var(--bc) / 0.5);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  min-width: 4rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.type-btn:hover {
+  color: oklch(var(--bc));
+  border-color: oklch(var(--bc) / 0.1);
+}
+
+.type-btn.active {
+  background: oklch(var(--p));
+  color: oklch(var(--pc));
+  border-color: oklch(var(--p));
+}
+
+/* Make placeholders more subtle */
+.input::placeholder,
+.textarea::placeholder,
+.select::placeholder {
+  color: oklch(var(--bc) / 0.25);
+  font-weight: 400;
+}
+
+/* Module style selector */
+.module-style-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.5rem;
+  border: 2px solid oklch(var(--bc) / 0.1);
+  background: oklch(var(--b2));
+  color: oklch(var(--bc) / 0.4);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.module-style-btn:hover {
+  color: oklch(var(--bc) / 0.7);
+  border-color: oklch(var(--bc) / 0.2);
+}
+
+.module-style-btn.active {
+  background: oklch(var(--p) / 0.15);
+  color: oklch(var(--p));
+  border-color: oklch(var(--p));
+}

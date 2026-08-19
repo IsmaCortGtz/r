@@ -1,0 +1,21 @@
+{
+  "name": "r",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.10",
+    "@types/node": "^26.2.0",
+    "rollup": "^4.62.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.8"
+  }
+}

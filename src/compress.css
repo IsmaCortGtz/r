@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 0.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+#input-link {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 360px;
+  max-width: 90vw;
+}
+
+#output-link-container {
+  text-align: center;
+}
+
+#output-link {
+  word-break: break-all;
+}
+
+#output-ratio {
+  font-size: 0.85rem;
+  color: gray;
+}
